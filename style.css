@@ -47,6 +47,7 @@
 }
 .projects_link {
     color: rgb(117, 117, 117);
+    text-decoration: underline;
 }
 .card_link {
     color: rgb(0, 0, 0);
