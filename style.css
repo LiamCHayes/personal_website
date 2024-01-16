@@ -48,6 +48,9 @@
 .projects_link {
     color: rgb(117, 117, 117);
 }
+.card_link {
+    color: rgb(0, 0, 0);
+}
 .contact {
     position: relative;
     margin-top: 100px;
