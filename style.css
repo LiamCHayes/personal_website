@@ -1,0 +1,89 @@
+/* hero background image */
+.navbarScroll.navbarDark {
+    background-color: black;
+}
+.bgimage {
+    height:72vh;
+    background: url('images/eldorado_climbing_cropped.jpg');
+    background-size:cover;
+    background-position: center;
+    position:relative;
+}
+.about {
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    background-color: rgb(215, 215, 215);
+}
+.imageAboutPage {
+    height:35vh;
+}
+.col-lg-8 {
+    position: relative;
+    left: 50px;
+    right: 50px;
+}
+.projects {
+    position: relative;
+    margin-top: 100px;
+}
+.articles {
+    position: relative;
+    margin-top: 100px;
+}
+.project_image {
+    height:25vh;
+}
+/* services section css */
+.projectsText.card {
+    height: 360px;
+    cursor: pointer;
+  }
+.card-title {
+    text-align: left;
+}
+.projectsText:hover {
+    border: 1px solid #008000;
+}
+.projects_link {
+    color: rgb(117, 117, 117);
+}
+.contact {
+    position: relative;
+    margin-top: 100px;
+}
+.cv_banner {
+    height:100vh;
+    background: url('images/naomi_pose_example.png');
+    background-size:auto;
+    background-position: center;
+    position:relative;
+}
+.project_intro {
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    background-color: rgb(215, 215, 215);
+}
+.demo_video {
+    width: 100%;
+}
+.volume_walking_grid {
+    display: grid;
+    grid-template-columns: 25% 5% 70%;
+}
+.dyno_slab_grid {
+    display: grid;
+    grid-template-columns: 25% 5% 70%;
+}
+.cell {
+    margin-top: 25px;
+    text-align: left;
+}
+.climb_section {
+    padding-bottom: 100px;
+}
+.power_generation_grid {
+    display: grid;
+    grid-template-columns: 55% 5% 40%;
+}

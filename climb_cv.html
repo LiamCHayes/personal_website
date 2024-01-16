@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <title>Computer Vision Climbing</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking css file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbarScroll navbar-dark navbarDark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Liam Hayes</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contact">Contact</a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    </nav>
+
+    <!-- About section -->
+    <section class="project_intro" id="project_intro">
+        <div class="container mt-4 pt-4">
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <img src="images/naomi_pose_example.png" class= "imageAboutPage" alt="">
+                </div>
+                <div class="col-lg-8">
+                    <h1 class="text-left">Computer Vision for Climbing</h1>
+                    <p> 
+                    This Python application uses MediaPipe Pose from Google to give insights into climbing technique from just a video.
+                    </p>
+                    <p> 
+                    It can give metrics for limb extension, velocity of hands and feet, center of gravity, and a 3D pose graph.
+                    </p>
+                    <a href="">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description of features -->
+    <section class="projects" id="projects">
+        <div class="container climb_section">
+            <h1 style="text-align: center;">Center of Gravity Tracking</h1>
+            <br>
+            <p>
+                After experimenting with real climbing videos, center of gravity tracking turned out to be one of the most useful features.
+                Being able to clearly see where the center of gravity is makes it obvious that most climbing techniques
+                work by manipulating the center of gravity.
+            </p>
+            <br>
+            <h4>Volume Walking</h4>
+            <div class="volume_walking_grid">
+                <div class="cell">
+                    <video controls autoplay loop muted class="demo_video">
+                        <source src="videos/center_gravity_volumeWalk.mp4" type="video/mp4">
+                        <source src="videos/center_gravity_volumeWalk.ogg" type="video/ogg">
+                    </video>
+                </div>
+                <div class="cell"></div>
+                <div class="cell">
+                    <p>
+                        It is well known that center of gravity placement is important with volume walking.
+                        Notice how each step is supported with a foot directly in line with the center of gravity.
+                        The impact of the center of gravity is even more apparent when you go frame by frame.
+                    </p>
+                    <br>
+                    <h6>Pause video and use arrow keys to scrub by frame:</h6>
+                        <li><i>0:01-0:02</i> Right leg doesn't extend until center of gravity is directly on top of the foot</li>
+                        <li><i>0:03-0:10</i> Transfer weight from leg to leg as he is walking across the volumes</li>
+                        <li><i>0:10-0:15</i> Centering weight under the finish hold to be able to match</li>
+                </div>
+            </div>
+            <br><br> 
+
+            <h4>Dynamic Slab Movement</h4>
+            <div class="dyno_slab_grid">
+                <div class="cell">
+                    <video controls autoplay loop muted class="demo_video">
+                        <source src="videos/center_gravity_dynamic_slab.mp4" type="video/mp4">
+                        <source src="videos/center_gravity_dynamic_slab.ogg" type="video/ogg">
+                    </video>
+                </div>
+                <div class="cell"></div>
+                <div class="cell">
+                    <p>
+                        Being able to fall in a controlled way shows excellent proprioception. Here, James evenly balances 
+                        his weight around the center line at the apex of the jump. Then he slowly falls over to catch the
+                        next hold.
+                    </p>
+                    <br>
+                    <h6>Watch at 0.25 speed:</h6>
+                        <li><i>0:01-0:02</i> Loads weight and extends each leg as center of gravity passes by</li>
+                        <li><i>0:02-0:02</i> Balances around center line at apex of the jump</li>
+                        <li><i>0:02-0:03</i> Falls over to catch the next hold</li>
+                        <li><i>0:03-0:04</i> Uses hips to stop the barn door and momentum</li>
+                </div>
+            </div>
+            <br><br> 
+
+            <h4>Efficiency Analysis</h4>
+            <div class="dyno_slab_grid">
+                <div class="cell">
+                    <video controls autoplay loop muted class="demo_video">
+                        <source src="videos/efficiency.mp4" type="video/mp4">
+                        <source src="videos/efficiency.ogg" type="video/ogg">
+                    </video>
+                </div>
+                <div class="cell"></div>
+                <div class="cell">
+                    <p>
+                        A prominent reason overhanging climbing is so hard is that it takes a lot of 
+                        core strength to be able to place and keep the feet on the wall. On top of that, 
+                        the arms can often be the only points of contact keeping you on. In order to limit
+                        the amount of energy spent per move, Naomi moves her center of gravity as little as 
+                        possible.
+                    </p>
+                    <br>
+                    <h6>There's a lot going on here:</h6>
+                        <li>Power generation and roatational control with the legs before the campus move (more details in the next section)</li>
+                        <li>Dissipates energy after catching the next hold by rotating her legs around the center of gravity</li>
+                        <li>Efficiently brings foot up to the wall by maintaining a consistent center of gravity position</li>
+                </div>
+            </div>
+        </div>
+
+        <div class="container climb_section">
+            <h1 style="text-align: center;">Limb Extension</h1>
+            <br>
+            <p>
+                In this application, limb extension is calculated as the distance from the shoulder to hand and
+                from the hip to foot. So far, this has been useful for showing power generation and rotation control.
+            </p>
+            <br>
+            <h4>Power Generation and Rotation Control</h4>
+            <div class="power_generation_grid">
+                <div class="cell">
+                    <video controls autoplay loop muted class="demo_video">
+                        <source src="videos/leg_extension_naomi.mp4" type="video/mp4">
+                        <source src="videos/leg_extension_naomi.ogg" type="video/ogg">
+                    </video>
+                </div>
+                <div class="cell"></div>
+                <div class="cell">
+                    <p>
+                        Here, Naomi uses leg extension to generate power for a campus move. At about 0:01, 
+                        she straightens her legs and then brings her knees up to gain momentum. This can be seen
+                        in the graph as the "hump". 
+                    </p>
+                    <br>
+                    <p>
+                        Immediately after the hump in the graph, the two lines diverge. This is because she is controlling
+                        the rotation by extending her legs in opposite directions to prevent from spinning off of the wall.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container climb_section">
+            <h1 style="text-align: center;">3D Pose Plot</h1>
+            <br>
+            <p>
+                Using MediaPipe Pose allows for a 3D pose plot. 
+                This can be used to compare and understand body positions better.
+            </p>
+            <p>
+                The origin is at the center of the hips and each red dot
+                has coordinates (x, y, z) relative to the origin at the hip.
+                These coordinates are available for every frame as well as 
+                coordinates relative to the frame size of the video
+            </p>
+            <br>
+            <video controls autoplay loop muted class="demo_video">
+                <source src="videos/pose_3d.mp4" type="video/mp4">
+                <source src="videos/pose_3d.ogg" type="video/ogg">
+            </video>
+        </div>
+
+        <div class="container climb_section">
+            <h1 style="text-align: center;">Upload Your Own Video</h1>
+            <br>
+            <div class="dyno_slab_grid">
+                <div class="cell">
+                    <video controls autoplay loop muted class="demo_video">
+                        <source src="videos/center_gravity_vw2.mp4" type="video/mp4">
+                        <source src="videos/center_gravity_vw2.ogg" type="video/ogg">
+                    </video>
+                </div>
+                <div class="cell"></div>
+                <div class="cell">
+                    <form>
+                        <input type="email" class="form-control mt-3" placeholder="Email">
+                        <div class="mb-3 mt-3">
+                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Drop or Upload Video Here"></textarea>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-success mt-3">Get Analysis</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- load javascript after loading all html content -->
+    <script type="text/javascript" src="script/script.js"></script>
+</body>
+
+</html>
