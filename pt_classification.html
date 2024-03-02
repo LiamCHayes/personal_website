@@ -2,7 +2,7 @@
 <html lang="en">
     
 <head>
-  <title>Projects</title>
+  <title>Portfolio Website-Liam</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- linking css file -->
@@ -12,35 +12,20 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
-  <!-- Navigation bar -->
-  <nav class="navbar navbar-expand-lg fixed-top navbarScroll navbar-dark navbarDark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Liam Hayes</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#contact">Contact</a>
-                </li>
-            </ul>
-            
-        </div>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
     </div>
-  </nav>
+    
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("nav.html");
+    });
+    </script>
   
   <!-- about section-->
   <section class="project_intro" id="project_intro">
