@@ -39,7 +39,11 @@
 .projectsText.card {
     height: 360px;
     cursor: pointer;
-  }
+}
+.projectsText2.card {
+height: 90px;
+cursor: pointer;
+}
 .card-title {
     text-align: left;
 }
@@ -92,4 +96,30 @@
 .power_generation_grid {
     display: grid;
     grid-template-columns: 55% 5% 40%;
+}
+.dropdown {
+display: inline-block;
+position: relative;
+width: 50%;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+width: 100%;
+overflow: auto;
+box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+background-color: #FFFFFF;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.dropdown-content a {
+display: block;
+color: #000000;
+padding: 5px;
+text-decoration: none;
+}
+.dropdown-content a:hover {
+color: #FFFFFF;
+background-color: #00A4BD;
 }
