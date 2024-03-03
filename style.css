@@ -39,6 +39,7 @@
 .projectsText.card {
     height: 360px;
     cursor: pointer;
+    border: 2px solid #6d6363
 }
 .projectsText2.card {
 height: 90px;
