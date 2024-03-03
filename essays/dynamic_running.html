@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <title>Portfolio Website-Liam</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking css file -->
+  <link rel="stylesheet" href="/style.css">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
+    </div>
+    
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("/nav.html");
+    });
+    </script>
+
+    <!-- About section -->
+    <section class="project_intro" id="project_intro">
+        <div class="container mt-4 pt-4">
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <img src="/images/alaska_running_cropped.jpg" class= "imageAboutPage" alt="">
+                </div>
+                <div class="col-lg-8">
+                    <h1 class="text-left">Trail Running Lessons for Robots</h1>
+                    <p> 
+                        Maximizing energy return, ground contact logic, foot trajectory, dynamic balance, uncertain environment,
+                        and more make this the ultimate robotics problem. I see great potential in drawing from trail running 
+                        experience to allow machines to better interact with any environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container climb_section">
+            <h1>Energy Return</h1>
+            <br>
+            <p>
+                Energy return is constantly on a runner's mind. Runners optimize for efficiency by strategically stretching 
+                our connective tissues: fascia, tendons, and ligaments. This multiplies our energy output every time 
+                we go through a stretch-reflex cycle. Another advantage is it reduces the amount of computation our brain has to do 
+                because we can confidently predict the result of each stretch-reflex cycle. Our body's passive dynamics 
+                free up both metabolic and computational resources for faster high-level decision making.
+            </p>
+            <p>
+                A helpful way to understand energy return is to understand how different sections of the body accomplish this 
+                and then understand how they work together. For this purpose, I partition the body into 3 areas: core, legs and arms.
+            </p>
+            <br>
+            <h4>Core</h4>
+            <p>
+                Our core has almost unlimited degrees of freedom and is at the center of all movement. This combination makes core 
+                control a key player in achieving high energy return. Our core is tightly wound with muscles, fascia, and tendons
+                that give us the high level of control that is neccessary for efficient movement.
+                
+            </p>
+            <p>
+                Stiffness is the number one priority; energy can easily dissipate into the tissues around the core becauase of the high degrees 
+                of freedom. Stiffness is achieved by contracting muscles and increasing intra-abdominal pressure. Think of 
+                <a href="https://squatuniversity.com/2016/02/12/the-squat-fix-core-stability-proper-breathing/">bracing for a squat</a>, 
+                but in a more dynamic way. To brace in the best way for running, for each step we <b>predict the direction of the force we put into the ground
+                and increase core stiffness in that direction</b>. 
+            </p>
+            <p>
+                We can now pair our dynamic bracing with the stretch reflex of our core. The main stretch reflex comes from the fascia 
+                that wraps from our hips to oppsite shoulder blades, forming an X across the front of our body. A diagonal of the X
+                stretches with each step, and as this contracts it propells our back foot and opposite shoulder forward. This in turn loads
+                the other diagonal of the X and the cycle repeats. This cyclic motion keeps energy within the system and allows for more efficiency.
+            </p>
+            <br>
+            <h4>Legs</h4>
+            <p>
+                Our legs are structurally sound springs. While the core mostly determines what direction we move in, the legs provide the force to 
+                move us. Stiffness is important here, but because there are less degrees of freedom the stretch reflex 
+                plays a much bigger role. The stretch reflex in the legs is much more linear; the achilles tendon and other tendons stretch 
+                and recoil to put force into the ground.
+            </p>
+            <p>
+                The hips are the interface between the legs and the core. In a perfect system, the hips align the force from the legs to
+                the direction of stiffnes in the core.
+            </p>
+            <br>
+            <h4>Arms</h4>
+            <p>
+                Arms provide a counter balance to keep us moving in the right direction. This is especially apparent in trail running when 
+                running downhill. Although the arms don't contribute a lot to power production, they demonstrate the importance of counter 
+                balance for efficiency.
+            </p>
+            <br>
+            <h1>Ground Contact Logic</h1>
+            <br>
+            <p>
+                Knowing where to strike, when to heel strike or toe strike, and understanding the properties of the ground you are striking feels 
+                intuitive to humans. Doing this well is only achieved through time and practice. After a lot of practice, I've determined that 
+                speed and quality of the decision are the two things to optimize for.
+            </p>
+            <p>
+                The value of making fast decisions is obvious. There is a limited amount of time between the last decision and the next, which 
+                puts an upper bound on the required speed of a decision. However, optimizing beyond this upper bound gives more tolerance for 
+                the quality of each decision and frees up more resources to plan further ahead.
+            </p>
+            <p>
+                Likewise, increasing the quality of each decision gives more tolerance for the speed of each decision. A high quality decision 
+                can give a better prior for the next decision you will have to make, therefore increasing the speed and quality of the next decision. 
+            </p>
+            <br>
+            <h1>Dynamic Balance and Foot Trajectory</h1>
+            <br>
+            <p>
+                Prediction is the name of the game; reaction should be a last resort. Once you have a ground contact decision and 
+                aligned your foot trajectory with that decision, you need to predict what you will need to do to stay balanced. 
+                This means predicting the direction of the force you will put into the ground and how to optimize energy return 
+                around that. 
+            </p>
+            <br>
+            <h1>Discovering Properties of an Uncertain Environment</h1>
+            <br>
+            <p>
+                At the beginning of a trail run in a new place, the prior is the knowledge of all the previous trail runs. 
+                With each step, the prior is slightly updated for the properties of this environment. In order for this model to 
+                be effective, there must be a descriptive prior <i>before</i> the trail run even starts. The ability to discover 
+                propeties of a new environment depends on a solid, low-variance, knowledge of previous environments so that the 
+                updates to the prior can be valueable and specific to the new environment. 
+            </p>
+        </div>
+
+    </section>
+
+    <!-- load javascript after loading all html content -->
+    <script type="text/javascript" src="/script/script.js"></script>
+</body>
+
+</html>
